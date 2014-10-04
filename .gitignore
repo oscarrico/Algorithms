@@ -1,0 +1,14 @@
+.metadata/
+.metadata/.lock
+
+.metadata/.log
+
+.metadata/.plugins/org.eclipse.core.resources/.history/0/b0211325d54900141b5182be15738754
+# Java class files
+*.class
+
+# Generated files
+bin/
+gen/
+
+*.ini
