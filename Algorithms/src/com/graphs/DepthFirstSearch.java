@@ -26,13 +26,26 @@ public class DepthFirstSearch extends GenericGraph {
 		return totalMarked;
 	}
 	
+	public void checkConnection(String nodeA, String nodeB){
+		markNodes(nodeA);
+		System.out.println(markedNodes.containsKey(nodeB));
+	}
+	
 	public static void main(String[] args){
 		DepthFirstSearch graph = new DepthFirstSearch();
 		graph.createGraph();
-		for (Map.Entry<String, List<String>> edge : graph.getGraph().entrySet()){
-			if( graph.markedNodes.get(edge.getKey()) == null)
-				System.out.println("Graph: "+edge.getKey()+ graph.markNodes(edge.getKey()));
-		}
+		
+		//Gets the number of connected graphs
+//		for (Map.Entry<String, List<String>> edge : graph.getGraph().entrySet()){
+//			if( graph.markedNodes.get(edge.getKey()) == null)
+//				System.out.println("Graph: "+edge.getKey()+ "--> "+graph.markNodes(edge.getKey()));
+//		}
+		
+		graph.checkConnection("a", "b");
+		graph.checkConnection("a", "c");
+		graph.checkConnection("h", "b");
+		
+		
 	}
 	
 	
